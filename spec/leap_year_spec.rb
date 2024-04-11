@@ -17,5 +17,15 @@ describe LeapYear do
         expect(LeapYear.check(2100)).to be false
       end
     end
+
+    context 'Years divisible by 4 and not by 100' do
+      it 'should return true when year is 2008' do
+        expect(LeapYear.check(2008)).to be true
+      end
+
+      it 'should return true when year is 2012' do
+        expect(LeapYear.check(2012)).to be true
+      end
+    end
   end
 end
